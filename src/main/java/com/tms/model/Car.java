@@ -2,6 +2,7 @@ package com.tms.model;
 
 import java.sql.Date;
 
+
 public class Car {
     private int id;
     private String name_brand;
