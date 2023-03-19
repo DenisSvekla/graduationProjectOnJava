@@ -20,11 +20,11 @@ public class UserRepository {
     }
 
     public ArrayList<User> getAllUsers() {
-        return (ArrayList<User>) template.query("SELECT * FROM user", new UserMapper());
+        return (ArrayList<User>) template.query("SELECT * FROM user_table", new UserMapper());
     }
 
     public User getUserById(int id) {
-        return template.queryForObject("SELECT * FROM user WHERE id=?", new UserMapper(), id);
+        return template.queryForObject("SELECT * FROM user_table WHERE id=?", new UserMapper(), id);
     }
 
 }
