@@ -3,10 +3,11 @@ package com.tms.model;
 import lombok.Data;
 import org.springframework.stereotype.Component;
 
+import java.sql.Date;
+
 @Data
 @Component
-public class Security {
+public class Subscription {
     private int id;
-    private String login_user;
-    private String password_user;
+    private Date expireDate;
 }
