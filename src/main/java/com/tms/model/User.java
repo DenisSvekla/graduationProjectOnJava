@@ -19,4 +19,5 @@ public class User {
     private Date created;
     private Date changed;
 
+
 }

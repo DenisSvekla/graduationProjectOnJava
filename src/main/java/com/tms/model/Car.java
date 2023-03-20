@@ -1,8 +1,12 @@
 package com.tms.model;
 
+import lombok.Data;
+import org.springframework.stereotype.Component;
+
 import java.sql.Date;
 
-
+@Component
+@Data
 public class Car {
     private int id;
     private String name_brand;
