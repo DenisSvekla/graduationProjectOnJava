@@ -1,0 +1,70 @@
+package com.tms.repository;
+
+import com.tms.model.User;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
+import org.springframework.stereotype.Repository;
+import java.util.ArrayList;
+
+@Repository
+public class UserRepository {
+    private final SessionFactory sessionFactory;
+
+
+    public UserRepository() {
+        this.sessionFactory = new Configuration().configure().buildSessionFactory();
+    }
+
+    public User getUserById(int id) {
+        Session session = sessionFactory.openSession();
+        session.beginTransaction();
+        Query query = session.createQuery("from User u where u.id=:id");
+        query.setParameter("id", id);
+        User user = (User)query.getSingleResult();
+        session.close();
+
+        if (user!=null) {
+            return user;
+        }
+
+        return new User();
+    }
+
+    public ArrayList<User> getAllUsers(){
+        Session session = sessionFactory.openSession();
+        session.beginTransaction();
+        Query query = session.createQuery("from User");
+        ArrayList<User> list = (ArrayList<User>) query.getResultList();
+        session.close();
+        return list;
+    }
+
+
+
+
+//    public ArrayList<User> getAllUsers() {
+//        return (ArrayList<User>) template.query("SELECT * FROM user_table WHERE is_deleted = false", new UserMapper());
+//    }
+
+//    public User getUserById(int id) {
+//        return template.queryForObject("SELECT * FROM user_table WHERE id=?", new UserMapper(), id);
+//    }
+
+//    public Boolean createUser(User user, Security security) {
+//        int resultForCreateUser;
+//        int resultForSecurity= template.update("INSERT INTO security_table (id, login_user, password_user)" + "VALUES(DEFAULT, ? ,?) ",
+//                new Object[]{security.getLogin_user(), security.getPassword_user()});
+//        Security security1 = template.queryForObject("SELECT * FROM security_table WHERE login_user=?", new SecurityMapper(), security.getLogin_user());
+//
+//        resultForCreateUser = template.update("INSERT INTO user_table (id, name, surname,email,birthday_date,security_id,user_type,is_deleted,created,changed)" +
+//                "VALUES (DEFAULT,?,?,?,?,?,?, DEFAULT, ?, ?)",
+//                new Object[]{user.getName(),user.getSurname(), user.getEmail(), user.getBirthday_date(), security1.getId(),user.getUser_type(),new Date((new java.util.Date()).getTime()),new Date((new java.util.Date()).getTime())});
+//
+//
+//        return resultForCreateUser==1;
+//
+//    }
+
+}

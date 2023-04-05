@@ -5,16 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f4e3fe3-641a-4c96-b767-9e20d72e40ab" name="Changes" comment="continue work">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/Subscription.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/utils/CarMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/utils/SecurityMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/repository/textFileUserRepository.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/model/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/model/Security.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/Security.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/repository/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +57,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;database.data.extractors.current.export.id&quot;: &quot;SQL Inserts&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Study&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/denissv/IdeaProjects/graduationProjectOnJava/src/main/resources&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -65,6 +65,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;f0985c3fbf315cc110e59262ec3cca8d&quot;
   },
@@ -76,6 +77,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\denissv\IdeaProjects\graduationProjectOnJava\src\main\resources" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\denissv\IdeaProjects\graduationProjectOnJava\src\main\resources" />
     </key>
@@ -135,6 +139,15 @@
       <workItem from="1679082025507" duration="119000" />
       <workItem from="1679248924073" duration="5000" />
       <workItem from="1679328349049" duration="386000" />
+      <workItem from="1679332548907" duration="3163000" />
+      <workItem from="1679500399247" duration="9450000" />
+      <workItem from="1679933342389" duration="3897000" />
+      <workItem from="1679942142609" duration="706000" />
+      <workItem from="1680106250892" duration="3824000" />
+      <workItem from="1680541233492" duration="12000" />
+      <workItem from="1680543727718" duration="2949000" />
+      <workItem from="1680612247375" duration="10000" />
+      <workItem from="1680712137700" duration="636000" />
     </task>
     <task id="LOCAL-00001" summary="start project">
       <created>1678988794104</created>
@@ -171,5 +184,6 @@
     <MESSAGE value="start project" />
     <MESSAGE value="continue work" />
     <option name="LAST_COMMIT_MESSAGE" value="continue work" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
