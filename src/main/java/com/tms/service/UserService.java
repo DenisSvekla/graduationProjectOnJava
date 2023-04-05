@@ -1,6 +1,5 @@
 package com.tms.service;
 
-import com.tms.model.Security;
 import com.tms.model.User;
 import com.tms.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,15 +16,16 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    public ArrayList<User> getAllUsers() {
-        return userRepository.getAllUsers();
+    public ArrayList<User> getAllUsers() {    return (ArrayList<User>) userRepository.findAll();
     }
 
     public User getUserById(int id) {
-        return userRepository.getUserById(id);
+        return userRepository.findById(id).orElse(new User());
     }
 
-    public Boolean createUser(User user, Security security) {return userRepository.createUser(user,security);}
+    public User createUser(User user) { return userRepository.save(user);}
+
+   // public Boolean createUser(User user, Security security) {return userRepository.createUser(user,security);}
 
 
 }
