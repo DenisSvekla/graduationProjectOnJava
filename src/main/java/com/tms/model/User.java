@@ -29,9 +29,6 @@ public class User {
     @Column(name ="birthday_date")
     private Date birthday_date;
 
-    @Column(name = "security_id")
-    private int security_id;
-
     @Column(name = "user_type")
     private String user_type;
 
@@ -43,5 +40,11 @@ public class User {
 
     @Column(name = "changed")
     private Date changed;
+
+    @Column(name = "login_user")
+    private String loginUser;
+
+    @Column(name = "password_user")
+    private String passwordUser;
 
 }

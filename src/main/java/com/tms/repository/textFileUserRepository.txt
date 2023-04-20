@@ -58,7 +58,7 @@ public class UserRepository {
 //                new Object[]{security.getLogin_user(), security.getPassword_user()});
 //        Security security1 = template.queryForObject("SELECT * FROM security_table WHERE login_user=?", new SecurityMapper(), security.getLogin_user());
 //
-//        resultForCreateUser = template.update("INSERT INTO user_table (id, name, surname,email,birthday_date,security_id,user_type,is_deleted,created,changed)" +
+//        resultForCreateUser = template.update("INSERT INTO user_table (id, name, surname,email,birthday_date,user_type,is_deleted,created,changed)" +
 //                "VALUES (DEFAULT,?,?,?,?,?,?, DEFAULT, ?, ?)",
 //                new Object[]{user.getName(),user.getSurname(), user.getEmail(), user.getBirthday_date(), security1.getId(),user.getUser_type(),new Date((new java.util.Date()).getTime()),new Date((new java.util.Date()).getTime())});
 //

@@ -4,16 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f4e3fe3-641a-4c96-b767-9e20d72e40ab" name="Changes" comment="continue work">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/repository/textFileUserRepository.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="6f4e3fe3-641a-4c96-b767-9e20d72e40ab" name="Changes" comment="continue work with project">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/request/AuthRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/request/SecurityUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/request/UserRegistrationRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/response/AuthResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/repository/SecurityRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/security/CustomUserDetailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/security/JwtFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/security/JwtService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/security/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/security/SecurityController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/security/SecurityService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/model/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/model/Security.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/Security.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/repository/textFileUserRepository.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/repository/textFileUserRepository.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/utils/SecurityMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/utils/SecurityMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/utils/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/utils/UserMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,6 +36,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -57,7 +70,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;database.data.extractors.current.export.id&quot;: &quot;SQL Inserts&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/denissv/IdeaProjects/graduationProjectOnJava/src/main/resources&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/denissv/IdeaProjects/bingo_dynamic_value&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -82,6 +95,9 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\denissv\IdeaProjects\graduationProjectOnJava\src\main\resources" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.tms.repository" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.tms.utils" />
@@ -148,6 +164,15 @@
       <workItem from="1680543727718" duration="2949000" />
       <workItem from="1680612247375" duration="10000" />
       <workItem from="1680712137700" duration="636000" />
+      <workItem from="1681142525625" duration="8427000" />
+      <workItem from="1681236924801" duration="2939000" />
+      <workItem from="1681297595677" duration="100000" />
+      <workItem from="1681310302575" duration="9000" />
+      <workItem from="1681401943231" duration="7038000" />
+      <workItem from="1681480451157" duration="10000" />
+      <workItem from="1681832870136" duration="3174000" />
+      <workItem from="1681846499718" duration="2761000" />
+      <workItem from="1682005937909" duration="1787000" />
     </task>
     <task id="LOCAL-00001" summary="start project">
       <created>1678988794104</created>

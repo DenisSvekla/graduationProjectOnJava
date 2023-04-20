@@ -1,6 +1,7 @@
 package com.tms.controller;
 
 import com.tms.model.User;
+import com.tms.model.request.UserRegistrationRequest;
 import com.tms.service.UserService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -11,10 +12,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
@@ -36,6 +34,12 @@ public class UserController {
         return new ResponseEntity<>(list,(!list.isEmpty())?HttpStatus.OK:HttpStatus.NOT_FOUND);
     }
 
+    // TODO добавить получение всех пользователей с помощью dto объекта
+    // TODO добавить получение пользователя по id
+    // TODO добавить добавление авто в избранное
+    // TODO добавить обновление пользователя
+    // TODO добавить удаление пользователя
+    // TODO добавить добавление пользователя
     @Operation(summary = "Отдает пользователя по id")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Все супер"),
@@ -60,6 +64,11 @@ public class UserController {
 //        return userService.createUser(user,security);
 //    }
 
+    @PostMapping("/registration")
+    public ResponseEntity<HttpStatus> registration(@RequestBody UserRegistrationRequest userRegistrationRequest) {
+      Boolean result = userService.userRegistration(userRegistrationRequest);
+        return new ResponseEntity<>(result ? HttpStatus.CREATED : HttpStatus.CONFLICT);
+    }
 
 
     }
