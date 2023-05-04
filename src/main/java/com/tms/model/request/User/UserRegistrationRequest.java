@@ -1,9 +1,9 @@
-package com.tms.model.request;
+package com.tms.model.request.User;
+
+import java.sql.Date;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-
-import java.sql.Date;
 
 @AllArgsConstructor
 @Data

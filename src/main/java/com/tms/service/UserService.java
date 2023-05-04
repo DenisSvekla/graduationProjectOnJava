@@ -1,15 +1,16 @@
 package com.tms.service;
 
+import java.sql.Date;
+import java.util.ArrayList;
+
 import com.tms.model.User;
-import com.tms.model.request.UserRegistrationRequest;
+import com.tms.model.request.User.UserRegistrationRequest;
+import com.tms.model.response.User.UserGetByIdResponse;
 import com.tms.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.sql.Date;
-import java.util.ArrayList;
 
 @Service
 public class UserService {
@@ -22,11 +23,15 @@ public class UserService {
         this.passwordEncoder = passwordEncoder;
     }
 
-    public ArrayList<User> getAllUsers() {    return (ArrayList<User>) userRepository.findAll();
+    public ArrayList<User> getAllUsers() { return (ArrayList<User>) userRepository.findAll();
     }
 
-    public User getUserById(int id) {
+    public UserGetByIdResponse getUserById(int id) {
         return userRepository.findById(id).orElse(new User());
+    }
+
+    public User getUserByUserLogin(String userLogin){
+        return userRepository.findByLoginUser(userLogin).orElse((new User()));
     }
 
     public User createUser(User user) { return userRepository.save(user);}
