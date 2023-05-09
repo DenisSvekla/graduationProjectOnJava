@@ -2,6 +2,7 @@ package com.tms.controller;
 
 import java.util.ArrayList;
 
+import com.tms.config.forValidation.ValidationForOperators;
 import com.tms.model.User;
 import com.tms.model.request.User.UserRegistrationRequest;
 import com.tms.model.response.User.UserGetByIdResponse;
@@ -15,8 +16,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -25,6 +24,7 @@ import org.springframework.web.bind.annotation.*;
 public class UserController {
 
     UserService userService;
+    ValidationForOperators validationForOperators;
 
     private final Logger log = LoggerFactory.getLogger(this.getClass());
 
@@ -32,18 +32,17 @@ public class UserController {
     public UserController(UserService userService) {
         this.userService = userService;
     }
+
     @GetMapping
-   public ResponseEntity<ArrayList<User>> getAllUser() {
+    public ResponseEntity<ArrayList<User>> getAllUser() {
         ArrayList<User> list = userService.getAllUsers();
-        return new ResponseEntity<>(list,(!list.isEmpty())?HttpStatus.OK:HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(list, (!list.isEmpty()) ? HttpStatus.OK : HttpStatus.CONFLICT);
     }
 
     // TODO добавить получение всех пользователей с помощью dto объекта
-    // TODO добавить получение пользователя по id
     // TODO добавить добавление авто в избранное
     // TODO добавить обновление пользователя
-    // TODO добавить удаление пользователя
-    // TODO добавить добавление пользователя
+
     @Operation(summary = "Отдает пользователя по id")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Все супер"),
@@ -51,36 +50,33 @@ public class UserController {
     })
     @GetMapping("/{id}")
     public ResponseEntity<UserGetByIdResponse> getUserById(@PathVariable @Parameter(description = "айдишки") int id) {
-        var principal =  (UserDetails)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        String nameForCheck = principal.getUsername();
-        User userViaContext = userService.getUserByUserLogin(nameForCheck);
-        User user = userService.getUserById(id);
-        if (user.getLoginUser().equals(userViaContext.getLoginUser()) && userViaContext.getUser_type().equals("USER")){
-            return new ResponseEntity<>(HttpStatus.FORBIDDEN);
+        UserGetByIdResponse user = userService.getUserById(id);
+        if (user == null) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
-        return new ResponseEntity<>(user,HttpStatus.OK);
+
+        return new ResponseEntity<>(user, HttpStatus.OK);
     }
 
-//    @PostMapping("/deleteUser")
-//    public ResponseEntity<HttpStatus> deleteUser() {
-//    return ResponseEntity<>(HttpStatus.OK);
-//    }
+    @DeleteMapping("/{id}")
+    public ResponseEntity<HttpStatus> deleteUser(@PathVariable int id) {
+        boolean checkAboutSuccesfullMessage = userService.deleteUser(id);
+        return new ResponseEntity <> (checkAboutSuccesfullMessage ? HttpStatus.NO_CONTENT : HttpStatus.CONFLICT);
+    }
 
-//    @PostMapping
-//    public Boolean createUser(@RequestBody @Valid Security security, User user, BindingResult bindingResult ) {
-//        if (bindingResult.hasErrors()){
-//            for (ObjectError o:bindingResult.getAllErrors()){
-//                log.warn("we have some errors" + o);
-//            }
-//        }
-//        return userService.createUser(user,security);
-//    }
 
     @PostMapping("/registration")
     public ResponseEntity<HttpStatus> registration(@RequestBody UserRegistrationRequest userRegistrationRequest) {
-      Boolean result = userService.userRegistration(userRegistrationRequest);
+        Boolean result = userService.userRegistration(userRegistrationRequest);
         return new ResponseEntity<>(result ? HttpStatus.CREATED : HttpStatus.CONFLICT);
     }
 
-
-    }
+//    @PutMapping("/{id}")
+//    public ResponseEntity<HttpStatus> updateUser(@RequestBody UserUpdateDto userUpdateDto, @PathVariable int id) {
+//        User user = userService.updateUser(userUpdateDto,id);
+//        if (user !=null) {
+//            return new ResponseEntity<>(HttpStatus.CREATED);
+//        }
+//        return new ResponseEntity<>(HttpStatus.CONFLICT);
+//    }
+}

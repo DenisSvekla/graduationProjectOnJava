@@ -10,22 +10,25 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Integer> {
-    @Modifying
+
     @Query (value = "from User where is_deleted = false AND id=:id")
     Optional<User> findByIs_deleted(int id);
-
 
     @Modifying
     @Query (value = "from User where is_deleted = false")
     Optional<User> getAllByIs_deleted();
 
-    @Modifying
     @Query(value = "from User where loginUser=:loginUser")
     Optional<User> getUserByUserLogin(String loginUser);
 
 
-
-
     Optional<User> findByName(String username);
     Optional<User> findByLoginUser(String loginUser);
+
+    @Modifying
+    @Query (nativeQuery = true, value = "UPDATE user_table SET is_deleted =true WHERE id = :id",
+            countQuery = "SELECT * from user_table WHERE id = :id")
+    void deleteUser(int id);
+
+
 }

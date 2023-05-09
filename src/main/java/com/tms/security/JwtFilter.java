@@ -1,5 +1,13 @@
 package com.tms.security;
 
+import javax.servlet.FilterChain;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.http.HttpServletRequest;
+import java.io.IOException;
+
+import com.tms.model.User;
 import com.tms.repository.UserRepository;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -8,13 +16,6 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 import org.springframework.web.filter.GenericFilterBean;
-
-import javax.servlet.FilterChain;
-import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
-import javax.servlet.http.HttpServletRequest;
-import java.io.IOException;
 
 @Component
 public class JwtFilter extends GenericFilterBean {
@@ -34,7 +35,8 @@ public class JwtFilter extends GenericFilterBean {
 
         if (StringUtils.hasText(token) && token.startsWith("Bearer ") && jwtService.isValid(token.substring(7))) {
             String login = jwtService.getLoginFromToken(token.substring(7));
-            com.tms.model.User userFromDb = userRepository.findByLoginUser(login).orElseThrow(() -> new UsernameNotFoundException(login));
+            User userFromDb = userRepository.findByLoginUser(login).orElseThrow(() -> new UsernameNotFoundException(login));
+
             UserDetails secUSer = org.springframework.security.core.userdetails.User.builder()
                     .username(userFromDb.getLoginUser())
                     .password(userFromDb.getPasswordUser())

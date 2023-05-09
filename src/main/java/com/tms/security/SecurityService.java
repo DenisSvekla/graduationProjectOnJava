@@ -23,8 +23,8 @@ public class SecurityService {
         this.passwordEncoder = passwordEncoder;
     }
 
-    public String  getToken (AuthRequest authRequest) {
-        Optional<User> user = userRepository.findByName(authRequest.getLogin());
+    public String getTokenFromAuthRequest(AuthRequest authRequest) {
+        Optional<User> user = userRepository.findByLoginUser(authRequest.getLogin());
         if(user.isPresent() && passwordEncoder.matches(authRequest.getPassword(),user.get().getPasswordUser())) {
             return jwtService.createJwtToken((authRequest.getLogin()));
         }
