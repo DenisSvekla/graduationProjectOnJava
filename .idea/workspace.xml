@@ -5,15 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f4e3fe3-641a-4c96-b767-9e20d72e40ab" name="Changes" comment="continue work with project">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/request/User/UserDeleteRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/request/User/UserGetById.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/response/User/UserGetByIdResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/config/forValidation/ValidationForOperators.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/request/User/UserUpdateDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/service/validations/CheckUserById.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/model/request/UserRegistrationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/request/User/UserRegistrationRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/model/response/User/UserGetByIdResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/response/User/UserGetByIdResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/security/CustomUserDetailService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/security/JwtFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/security/JwtFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/security/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/security/JwtService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/security/SecurityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/security/SecurityController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/security/SecurityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/security/SecurityService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +31,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="spring-beans.schema" />
         <option value="Class" />
       </list>
     </option>
@@ -30,7 +39,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature/SpringSecurity" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -81,6 +90,7 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\denissv\IdeaProjects\graduationProjectOnJava\src\main\resources" />
+      <recent name="C:\Users\denissv\IdeaProjects\graduationProjectOnJava\src\main\resources\META-INF" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.tms.utils" />
@@ -155,6 +165,8 @@
       <workItem from="1683052316985" duration="1118000" />
       <workItem from="1683057400926" duration="2972000" />
       <workItem from="1683127136777" duration="59000" />
+      <workItem from="1683220483324" duration="18225000" />
+      <workItem from="1683651877343" duration="5324000" />
     </task>
     <task id="LOCAL-00001" summary="start project">
       <created>1678988794104</created>
@@ -170,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678999325695</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="continue work with project">
+      <created>1683220554875</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1683220554875</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,7 +209,39 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="start project" />
     <MESSAGE value="continue work" />
-    <option name="LAST_COMMIT_MESSAGE" value="continue work" />
+    <MESSAGE value="continue work with project" />
+    <option name="LAST_COMMIT_MESSAGE" value="continue work with project" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.7.5/spring-boot-autoconfigure-2.7.5.jar!/org/springframework/boot/autoconfigure/jdbc/DataSourceProperties.class</url>
+          <line>53</line>
+          <properties class="org.springframework.boot.autoconfigure.jdbc.DataSourceProperties" method="initializeDataSourceBuilder">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/tms/service/UserService.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="int" />
+        <PinnedItemInfo parentTag="java.lang.String" memberName="value" />
+      </pinned-members>
+    </pin-to-top-manager>
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="((DynamicAdvisedInterceptor)this.CGLIB$CALLBACK_0).advised" custom="com.tms.service.UserService,org.springframework.aop.framework.CglibAopProxy.DynamicAdvisedInterceptor" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

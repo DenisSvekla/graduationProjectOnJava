@@ -9,6 +9,7 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 @Configuration
@@ -31,13 +32,16 @@ public class SecurityConfig {
                         .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                         .and()
                         .authorizeRequests()
-                        .antMatchers(HttpMethod.GET, "/user").permitAll()
-                        .antMatchers(HttpMethod.POST, "/user/registration").permitAll()
-                        .antMatchers(HttpMethod.DELETE, "/user/**").permitAll()
                         .antMatchers(HttpMethod.POST, "/auth").permitAll()
+                        .antMatchers(HttpMethod.POST, "/user/registration").permitAll()
+                        .antMatchers(HttpMethod.GET, "/user").hasAnyRole("USER","ADMIN")
+                        .antMatchers(HttpMethod.GET, "/user/**").hasAnyRole("USER","ADMIN")
+                        .antMatchers(HttpMethod.DELETE, "/user/**").hasAnyRole("USER","ADMIN")
                         .anyRequest().authenticated()
                         .and()
                         .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
+                        .exceptionHandling().authenticationEntryPoint(new LoginUrlAuthenticationEntryPoint("/auth"))
+                        .and()
                         .build();
 
     }

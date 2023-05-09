@@ -1,13 +1,13 @@
 package com.tms.security;
 
+import java.util.Date;
+import java.util.concurrent.TimeUnit;
+
 import io.jsonwebtoken.JwtException;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
-
-import java.util.Date;
-import java.util.concurrent.TimeUnit;
 
 @Component
 public class JwtService {
@@ -35,11 +35,11 @@ public class JwtService {
     }
 
     public Boolean isValid(String token) {
-
      try {
          Jwts.parser()
                  .setSigningKey(key)
                  .parseClaimsJws(token);
+         return true;
      } catch (JwtException e) {
          System.out.println("Jwt exception " + e);
      }

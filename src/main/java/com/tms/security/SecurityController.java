@@ -15,14 +15,16 @@ public class SecurityController {
 
     private final SecurityService securityService;
 
+
    @Autowired
     public SecurityController(SecurityService securityService) {
         this.securityService = securityService;
-    }
+
+   }
 
     @PostMapping("/auth")
     public ResponseEntity<AuthResponse> auth(@RequestBody AuthRequest authRequest) {
-        String result = securityService.getToken(authRequest);
+        String result = securityService.getTokenFromAuthRequest(authRequest);
         if(!result.isBlank()) {
             return new ResponseEntity<>(new AuthResponse(result), HttpStatus.CREATED);
         }
