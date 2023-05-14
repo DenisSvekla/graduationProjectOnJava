@@ -2,11 +2,12 @@ package com.tms.controller;
 
 import java.util.ArrayList;
 
-import com.tms.config.forValidation.ValidationForOperators;
-import com.tms.model.User;
+import com.tms.model.domain.User;
 import com.tms.model.request.User.UserRegistrationRequest;
+import com.tms.model.request.User.UserUpdateDto;
 import com.tms.model.response.User.UserGetByIdResponse;
 import com.tms.service.UserService;
+import com.tms.service.impl.UserServiceImpl;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -23,13 +24,12 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/user")
 public class UserController {
 
-    UserService userService;
-    ValidationForOperators validationForOperators;
+    private final UserService userService;
 
     private final Logger log = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
-    public UserController(UserService userService) {
+    public UserController(UserServiceImpl userService) {
         this.userService = userService;
     }
 
@@ -60,23 +60,23 @@ public class UserController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<HttpStatus> deleteUser(@PathVariable int id) {
-        boolean checkAboutSuccesfullMessage = userService.deleteUser(id);
-        return new ResponseEntity <> (checkAboutSuccesfullMessage ? HttpStatus.NO_CONTENT : HttpStatus.CONFLICT);
+        userService.deleteUser(id);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
 
     @PostMapping("/registration")
     public ResponseEntity<HttpStatus> registration(@RequestBody UserRegistrationRequest userRegistrationRequest) {
-        Boolean result = userService.userRegistration(userRegistrationRequest);
-        return new ResponseEntity<>(result ? HttpStatus.CREATED : HttpStatus.CONFLICT);
+        User user = userService.userRegistration(userRegistrationRequest);
+        return new ResponseEntity<>(user.getLoginUser()!=null ? HttpStatus.CREATED : HttpStatus.CONFLICT);
     }
 
-//    @PutMapping("/{id}")
-//    public ResponseEntity<HttpStatus> updateUser(@RequestBody UserUpdateDto userUpdateDto, @PathVariable int id) {
-//        User user = userService.updateUser(userUpdateDto,id);
-//        if (user !=null) {
-//            return new ResponseEntity<>(HttpStatus.CREATED);
-//        }
-//        return new ResponseEntity<>(HttpStatus.CONFLICT);
-//    }
+    @PutMapping("/{id}")
+    public ResponseEntity<HttpStatus> updateUser(@RequestBody UserUpdateDto userUpdateDto, @PathVariable int id) {
+        User user = userService.updateUser(userUpdateDto,id);
+        if (user !=null) {
+            return new ResponseEntity<>(HttpStatus.CREATED);
+        }
+        return new ResponseEntity<>(HttpStatus.CONFLICT);
+    }
 }

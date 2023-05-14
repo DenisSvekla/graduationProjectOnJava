@@ -5,22 +5,67 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f4e3fe3-641a-4c96-b767-9e20d72e40ab" name="Changes" comment="continue work with project">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/config/forValidation/ValidationForOperators.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/request/User/UserUpdateDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/service/validations/CheckUserById.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/ExceprtionResolver/ExceptionControllerAdvice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/ExceprtionResolver/ExceptionDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/ExceprtionResolver/NotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/ExceprtionResolver/OtherException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/annotation/CheckStatusForDeletingCarAnnotation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/annotation/CheckTransmission.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/controller/CarController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/controller/PhoneController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/mapper/MappersFromCar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/mapper/MappersFromUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/mapper/MappersToCar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/mapper/MappersToUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/domain/Comments.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/domain/FavoriteCar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/request/car/AddCarRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/request/car/DeleteCarRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/request/car/UpdateCarRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/request/phone/PhoneCreateRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/response/Car/GetAllCarsResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/response/Car/GetCarByIdResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/response/phone/PhoneRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/repository/CarRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/repository/CommentsRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/repository/FavoriteCarRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/repository/PhoneRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/service/CarService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/service/PhoneService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/service/impl/CarServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/service/impl/PhoneServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/utils/ExceptionMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/utils/GetIdUserFromContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/utils/validation/forAnnotation/CheckStatusForDeletingCar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/utils/validation/forAnnotation/CheckTransmissionLogic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/utils/validation/service/CheckUserOnAvailabilityForCarService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/config/SpringDataBaseConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/config/forValidation/ValidationForOperators.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/model/response/User/UserGetByIdResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/response/User/UserGetByIdResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/model/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/domain/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/model/Phone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/domain/Phone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/model/Security.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/model/Subscription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/domain/Subscription.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/model/request/AuthRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/request/AuthRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/model/request/User/UserRegistrationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/request/User/UserRegistrationRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/model/request/User/UserUpdateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/request/User/UserUpdateDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/repository/SecurityRepository.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/security/CustomUserDetailService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/security/JwtFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/security/JwtFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/security/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/security/JwtService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/security/SecurityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/security/SecurityController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/security/SecurityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/security/SecurityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/repository/textFileUserRepository.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/security/JwtFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/security/filter/JwtFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/security/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/security/service/JwtService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/security/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/security/SecurityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/security/controller/SecurityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/security/SecurityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/security/service/SecurityService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/service/validations/CheckUserById.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/utils/validation/service/CheckUserByIdInUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/utils/CarMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/utils/SecurityMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/utils/UserMapper.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,6 +77,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="spring-beans.schema" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -65,7 +111,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;database.data.extractors.current.export.id&quot;: &quot;SQL Inserts&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/denissv/IdeaProjects/graduationProjectOnJava/src/main/resources&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/denissv/IdeaProjects/storage&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -74,7 +120,7 @@
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.Java&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;f0985c3fbf315cc110e59262ec3cca8d&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -100,6 +146,22 @@
     <configuration name="Main | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/Main.http" requestIdentifier="#1" runType="Run single request">
       <method v="2" />
     </configuration>
+    <configuration name="TestClass.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="graduationProjectOnJava" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="graduationProjectOnJava.functionalTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="graduationProjectOnJava.functionalTest" />
+      <option name="MAIN_CLASS_NAME" value="graduationProjectOnJava.functionalTest.TestClass" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <option name="ACTIVE_PROFILES" />
       <option name="INCLUDE_PROVIDED_SCOPE" value="false" />
@@ -117,12 +179,14 @@
     </configuration>
     <list>
       <item itemvalue="HTTP Request.Main | #1" />
+      <item itemvalue="JUnit.TestClass.test" />
       <item itemvalue="Spring Boot.Main" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.Main" />
         <item itemvalue="HTTP Request.Main | #1" />
+        <item itemvalue="JUnit.TestClass.test" />
       </list>
     </recent_temporary>
   </component>
@@ -167,6 +231,11 @@
       <workItem from="1683127136777" duration="59000" />
       <workItem from="1683220483324" duration="18225000" />
       <workItem from="1683651877343" duration="5324000" />
+      <workItem from="1683742898432" duration="8227000" />
+      <workItem from="1683830262336" duration="5535000" />
+      <workItem from="1683909772825" duration="3126000" />
+      <workItem from="1683958446495" duration="22810000" />
+      <workItem from="1684058101600" duration="29205000" />
     </task>
     <task id="LOCAL-00001" summary="start project">
       <created>1678988794104</created>
@@ -216,25 +285,34 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.7.5/spring-boot-autoconfigure-2.7.5.jar!/org/springframework/boot/autoconfigure/jdbc/DataSourceProperties.class</url>
-          <line>53</line>
-          <properties class="org.springframework.boot.autoconfigure.jdbc.DataSourceProperties" method="initializeDataSourceBuilder">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="22" />
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/main/java/com/tms/utils/validation/forAnnotation/CheckTransmissionLogic.java</url>
+          <line>14</line>
+          <properties field="listTransmissions" class="com.tms.utils.validation.forAnnotation.CheckTransmissionLogic" />
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/tms/service/UserService.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="24" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/tms/service/impl/UserServiceImpl.java</url>
+          <line>95</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/tms/service/impl/PhoneServiceImpl.java</url>
+          <line>49</line>
+          <properties class="com.tms.service.impl.PhoneServiceImpl" method="deletePhone">
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="44" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="int" />
+        <PinnedItemInfo parentTag="java.util.Optional" memberName="value" />
         <PinnedItemInfo parentTag="java.lang.String" memberName="value" />
       </pinned-members>
     </pin-to-top-manager>

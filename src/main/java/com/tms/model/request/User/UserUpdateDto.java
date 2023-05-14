@@ -18,6 +18,5 @@ public class UserUpdateDto {
 
     private String loginUser;
 
-    private String passwordUser;
 
 }
