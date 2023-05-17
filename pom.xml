@@ -117,4 +117,16 @@
         </dependency>
 
     </dependencies>
+    <build>
+    <plugins>
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+            <configuration>
+                <mainClass>com.tms.Main</mainClass>
+                <layout>JAR</layout>
+            </configuration>
+        </plugin>
+    </plugins>
+    </build>
 </project>
