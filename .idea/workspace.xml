@@ -5,68 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f4e3fe3-641a-4c96-b767-9e20d72e40ab" name="Changes" comment="continue work with project">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/ExceprtionResolver/ExceptionControllerAdvice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/ExceprtionResolver/ExceptionDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/ExceprtionResolver/NotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/ExceprtionResolver/OtherException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/annotation/CheckStatusForDeletingCarAnnotation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/annotation/CheckTransmission.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/controller/CarController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/controller/PhoneController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/mapper/MappersFromCar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/mapper/MappersFromUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/mapper/MappersToCar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/mapper/MappersToUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/domain/Comments.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/domain/FavoriteCar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/request/car/AddCarRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/request/car/DeleteCarRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/request/car/UpdateCarRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/request/phone/PhoneCreateRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/response/Car/GetAllCarsResponseDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/response/Car/GetCarByIdResponseDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/response/phone/PhoneRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/repository/CarRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/repository/CommentsRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/repository/FavoriteCarRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/repository/PhoneRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/service/CarService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/service/PhoneService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/service/impl/CarServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/service/impl/PhoneServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/utils/ExceptionMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/utils/GetIdUserFromContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/utils/validation/forAnnotation/CheckStatusForDeletingCar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/utils/validation/forAnnotation/CheckTransmissionLogic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tms/utils/validation/service/CheckUserOnAvailabilityForCarService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/config/SpringDataBaseConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/config/forValidation/ValidationForOperators.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/model/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/domain/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/model/Phone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/domain/Phone.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/model/Security.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/model/Subscription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/domain/Subscription.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/model/request/AuthRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/request/AuthRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/model/request/User/UserRegistrationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/request/User/UserRegistrationRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/model/request/User/UserUpdateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/request/User/UserUpdateDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/repository/SecurityRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/repository/textFileUserRepository.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/security/JwtFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/security/filter/JwtFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/security/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/security/service/JwtService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/security/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/security/SecurityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/security/controller/SecurityController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/security/SecurityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/security/service/SecurityService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/service/validations/CheckUserById.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/utils/validation/service/CheckUserByIdInUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/utils/CarMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/utils/SecurityMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/utils/UserMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/tms/service/impl/UserServiceImplTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,37 +40,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;database.data.extractors.current.export.id&quot;: &quot;SQL Inserts&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/denissv/IdeaProjects/storage&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.Java&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;f0985c3fbf315cc110e59262ec3cca8d&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "database.data.extractors.current.export.id": "SQL Inserts",
+    "jdk.selected.JAVA_MODULE": "11",
+    "last_opened_file_path": "C:/Users/denissv/IdeaProjects/storage",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.sourceCode.Java",
+    "spring.configuration.checksum": "f0985c3fbf315cc110e59262ec3cca8d"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;,
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql",
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\denissv\IdeaProjects\graduationProjectOnJava\src\main\resources" />
@@ -177,7 +119,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="docker-compose.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker2">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yaml.database: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="database" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <list>
+      <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yaml.database: Compose Deployment" />
       <item itemvalue="HTTP Request.Main | #1" />
       <item itemvalue="JUnit.TestClass.test" />
       <item itemvalue="Spring Boot.Main" />
@@ -186,6 +151,8 @@
       <list>
         <item itemvalue="Spring Boot.Main" />
         <item itemvalue="HTTP Request.Main | #1" />
+        <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yaml.database: Compose Deployment" />
         <item itemvalue="JUnit.TestClass.test" />
       </list>
     </recent_temporary>
@@ -236,6 +203,7 @@
       <workItem from="1683909772825" duration="3126000" />
       <workItem from="1683958446495" duration="22810000" />
       <workItem from="1684058101600" duration="29205000" />
+      <workItem from="1684353101674" duration="2522000" />
     </task>
     <task id="LOCAL-00001" summary="start project">
       <created>1678988794104</created>
@@ -258,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683220554875</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="continue work with project">
+      <created>1684344729818</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1684344729818</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,15 +260,9 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-field">
-          <url>file://$PROJECT_DIR$/src/main/java/com/tms/utils/validation/forAnnotation/CheckTransmissionLogic.java</url>
-          <line>14</line>
-          <properties field="listTransmissions" class="com.tms.utils.validation.forAnnotation.CheckTransmissionLogic" />
-          <option name="timeStamp" value="27" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/tms/service/impl/UserServiceImpl.java</url>
-          <line>95</line>
+          <line>97</line>
           <properties>
             <option name="lambda-ordinal" value="-1" />
           </properties>
@@ -301,8 +270,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/tms/service/impl/PhoneServiceImpl.java</url>
-          <line>49</line>
-          <properties class="com.tms.service.impl.PhoneServiceImpl" method="deletePhone">
+          <line>51</line>
+          <properties class="com.tms.service.impl.PhoneServiceImpl">
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="44" />
