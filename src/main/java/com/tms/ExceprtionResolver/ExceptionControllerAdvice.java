@@ -20,15 +20,17 @@ public class ExceptionControllerAdvice {
     private final Logger log = LoggerFactory.getLogger(this.getClass());
 
     @ExceptionHandler(BindException.class)
-    public ResponseEntity<ExceptionDetails> ValidationExceptionHandler() {
-        ExceptionDetails details = new ExceptionDetails(HttpStatus.CONFLICT, LocalDateTime.now(), "we have invalid data");
+    public ResponseEntity<ExceptionDetails> ValidationExceptionHandler(Exception e) {
+        log.warn("we have invalid data" + e.getMessage());
+        ExceptionDetails details = new ExceptionDetails(HttpStatus.CONFLICT, LocalDateTime.now(),
+                "we have invalid data");
         return new ResponseEntity<>(details, HttpStatus.CONFLICT);
     }
 
     @ExceptionHandler(NullPointerException.class)
-    public ResponseEntity<ExceptionDetails> dontHaveDataForObject(Exception e){
-        ExceptionDetails details = new ExceptionDetails(HttpStatus.INTERNAL_SERVER_ERROR, LocalDateTime.now(),"" +e.getClass());
-        return new ResponseEntity<>(details,HttpStatus.INTERNAL_SERVER_ERROR);
+    public ResponseEntity<ExceptionDetails> dontHaveDataForObject(Exception e) {
+        ExceptionDetails details = new ExceptionDetails(HttpStatus.INTERNAL_SERVER_ERROR, LocalDateTime.now(), "" + e.getClass());
+        return new ResponseEntity<>(details, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
     @ExceptionHandler(UsernameNotFoundException.class)

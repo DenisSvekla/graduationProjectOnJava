@@ -9,10 +9,13 @@ import com.tms.model.response.Car.GetAllCarsResponseDto;
 import com.tms.model.response.Car.GetCarByIdResponseDto;
 import org.springframework.stereotype.Component;
 
+/**
+ * Class for change object from car to car dto
+ */
 @Component
 public class MappersFromCar {
 
-    public GetCarByIdResponseDto carToGetCarByIdResponseDto(Car car, GetCarByIdResponseDto getCarByIdResponseDto, List<Comments> commentsForCar){
+    public GetCarByIdResponseDto carToGetCarByIdResponseDto(Car car, GetCarByIdResponseDto getCarByIdResponseDto, List<Comments> commentsForCar) {
         getCarByIdResponseDto.setName_brand(car.getName_brand());
         getCarByIdResponseDto.setName_model(car.getName_model());
         getCarByIdResponseDto.setTransmission(car.getTransmission());
@@ -31,9 +34,9 @@ public class MappersFromCar {
         return getCarByIdResponseDto;
     }
 
-    public ArrayList<GetAllCarsResponseDto> carToGetAllCarsResponseDto (ArrayList<Car> car) {
+    public ArrayList<GetAllCarsResponseDto> carToGetAllCarsResponseDto(ArrayList<Car> car) {
         ArrayList<GetAllCarsResponseDto> getAllCarsResponseDto = new ArrayList<>();
-        for(int i = 0; i<car.size(); i++) {
+        for (int i = 0; i < car.size(); i++) {
             GetAllCarsResponseDto duringCycleCar = new GetAllCarsResponseDto();
             duringCycleCar.setName_brand(car.get(i).getName_brand());
             duringCycleCar.setName_model(car.get(i).getName_model());

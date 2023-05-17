@@ -10,7 +10,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface FavoriteCarRepository extends JpaRepository<FavoriteCar, Integer> {
 
-
     /**
      * @param car
      * @param user
@@ -18,8 +17,11 @@ public interface FavoriteCarRepository extends JpaRepository<FavoriteCar, Intege
      */
     Optional<FavoriteCar> findFavoriteCarByCarIdAndUserId(Integer car, Integer user);
 
+    /**
+     * @param id
+     * @return
+     */
     int deleteFavoriteCarByCarId(int id);
-
 
 
 }

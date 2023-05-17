@@ -24,6 +24,10 @@ public interface CarRepository extends JpaRepository<Car, Integer> {
     @Query(nativeQuery = true, value = "SELECT * FROM car left join   user_table ut on ut.id = car.user_id left join subscription_table st on ut.id = st.user_id WHERE car.stasus = 'actual' ORDER BY st.expire_date\n")
     Optional<ArrayList<Car>> getAllCars();
 
+    /**
+     * @param id
+     * @return
+     */
     Optional<ArrayList<Car>> getCarsByUserId(int id);
 
 

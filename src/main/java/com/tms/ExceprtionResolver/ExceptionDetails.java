@@ -11,6 +11,7 @@ import org.springframework.http.HttpStatus;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ExceptionDetails {
+
     private HttpStatus status;
     private LocalDateTime timestamp;
     private String message;

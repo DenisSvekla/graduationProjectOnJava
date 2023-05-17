@@ -16,7 +16,7 @@ public class CheckStatusForDeletingCar implements ConstraintValidator<CheckStatu
 
     @Override
     public boolean isValid(String value, ConstraintValidatorContext context) {
-        List<String> check = status.stream().filter(value::contains).collect(Collectors.toList());
+        List<String> check = status.stream().filter(value::equals).collect(Collectors.toList());
         return check.size() == 1;
     }
 }

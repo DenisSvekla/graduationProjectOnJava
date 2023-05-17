@@ -9,35 +9,37 @@ import com.tms.model.request.phone.PhoneCreateRequestDto;
 import com.tms.model.response.phone.PhoneRequestDto;
 import com.tms.repository.PhoneRepository;
 import com.tms.service.PhoneService;
-import com.tms.utils.validation.service.CheckUserByIdInUserService;
+import com.tms.utils.validation.service.CheckUserByIdInService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import static com.tms.utils.ExceptionMessage.*;
+import static com.tms.utils.ExceptionMessage.DELETE_PHONE_EXCEPTION;
+import static com.tms.utils.ExceptionMessage.NO_ACCESS;
+import static com.tms.utils.ExceptionMessage.PHONES_NOT_FOUND;
 
 @Service
 public class PhoneServiceImpl implements PhoneService {
 
     private final PhoneRepository phoneRepository;
-    private final CheckUserByIdInUserService checkUserByIdInUserService;
+    private final CheckUserByIdInService checkUserByIdInService;
 
     @Autowired
-    public PhoneServiceImpl(PhoneRepository phoneRepository, CheckUserByIdInUserService checkUserByIdInUserService) {
+    public PhoneServiceImpl(PhoneRepository phoneRepository, CheckUserByIdInService checkUserByIdInService) {
         this.phoneRepository = phoneRepository;
-        this.checkUserByIdInUserService = checkUserByIdInUserService;
+        this.checkUserByIdInService = checkUserByIdInService;
     }
 
     public List<PhoneRequestDto> getAllPhonesByIdUser(int id) {
-        if(checkUserByIdInUserService.checkUserByIdAndType(id)) {
-            return  phoneRepository.getPhonesByUserId(id).orElseThrow(()-> new NotFoundException(PHONES_NOT_FOUND));
+        if (checkUserByIdInService.checkUserByIdAndType(id)) {
+            return phoneRepository.getPhonesByUserId(id).orElseThrow(() -> new NotFoundException(PHONES_NOT_FOUND));
         }
         throw new OtherException(NO_ACCESS);
     }
 
     public Phone createPhoneForUser(PhoneCreateRequestDto phoneCreateRequestDto, int id) {
         Phone phone = new Phone();
-        if(checkUserByIdInUserService.checkUserByIdAndType(id)) {
+        if (checkUserByIdInService.checkUserByIdAndType(id)) {
             phone.setUserId(id);
             phone.setNumber(phoneCreateRequestDto.getNumber());
             phone.setOperator(phoneCreateRequestDto.getOperator());
@@ -48,13 +50,12 @@ public class PhoneServiceImpl implements PhoneService {
 
     @Transactional
     public void deletePhone(int userId, int phoneId) {
-        if(checkUserByIdInUserService.checkUserByIdAndType(userId)) {
-            int result = phoneRepository.deletePhoneByUserIdAndId(userId,phoneId);
+        if (checkUserByIdInService.checkUserByIdAndType(userId)) {
+            int result = phoneRepository.deletePhoneByUserIdAndId(userId, phoneId);
             if (result == 0) {
                 throw new OtherException(DELETE_PHONE_EXCEPTION);
             }
-        }
-        else {
+        } else {
             throw new OtherException(NO_ACCESS);
         }
     }
