@@ -3,7 +3,6 @@ package com.tms.controller;
 import javax.validation.Valid;
 import java.util.ArrayList;
 
-import com.tms.model.domain.Car;
 import com.tms.model.domain.Comments;
 import com.tms.model.domain.FavoriteCar;
 import com.tms.model.request.car.AddCarRequestDto;
@@ -52,7 +51,7 @@ public class CarController {
 
     @PostMapping("/{id}")
     public ResponseEntity<HttpStatus> updateCar(@RequestBody @Valid UpdateCarRequestDto updateCarRequestDto, @PathVariable int id) {
-        Car car = carService.updateCar(updateCarRequestDto, id);
+        carService.updateCar(updateCarRequestDto, id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
