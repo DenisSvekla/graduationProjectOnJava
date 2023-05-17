@@ -7,10 +7,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
+/**
+ * Class for change object from user dto  to user
+ */
 @Component
 public class MappersToUser {
-
-    private final String userType = "USER";
 
     private final PasswordEncoder passwordEncoder;
 
@@ -20,19 +21,19 @@ public class MappersToUser {
     }
 
     public User fromUserUpdateDtoToUser(UserUpdateDto userUpdateDto, User user) {
-        if(userUpdateDto.getLoginUser()!=null) {
+        if (userUpdateDto.getLoginUser() != null) {
             user.setLoginUser(userUpdateDto.getLoginUser());
         }
-        if (userUpdateDto.getName()!=null) {
+        if (userUpdateDto.getName() != null) {
             user.setName(userUpdateDto.getName());
         }
-        if (userUpdateDto.getName()!=null) {
+        if (userUpdateDto.getName() != null) {
             user.setSurname(userUpdateDto.getSurname());
         }
-        if (userUpdateDto.getEmail()!=null){
+        if (userUpdateDto.getEmail() != null) {
             user.setEmail(userUpdateDto.getEmail());
         }
-        if (userUpdateDto.getBirthday_date()!=null) {
+        if (userUpdateDto.getBirthday_date() != null) {
             user.setBirthday_date(userUpdateDto.getBirthday_date());
         }
         return user;
@@ -45,6 +46,6 @@ public class MappersToUser {
         user.setSurname(userRegistrationRequest.getSurname());
         user.setEmail(userRegistrationRequest.getEmail());
         user.setBirthday_date(userRegistrationRequest.getBirthday_date());
-       return user;
+        return user;
     }
 }

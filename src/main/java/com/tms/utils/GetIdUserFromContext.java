@@ -9,6 +9,9 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 
 
+/**
+ * get info about users from context
+ */
 @Component
 public class GetIdUserFromContext {
 
@@ -19,6 +22,12 @@ public class GetIdUserFromContext {
         this.userRepository = userRepository;
     }
 
+
+    /**
+     * get user id from context
+     *
+     * @return
+     */
     public int getIdUserFromContext() {
         var userLoginFromSecurityContext = SecurityContextHolder.getContext().getAuthentication().getName();
         Optional<User> userFromContext = userRepository.getUserByUserLogin(userLoginFromSecurityContext);

@@ -27,7 +27,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import static com.tms.utils.ExceptionMessage.*;
+import static com.tms.utils.ExceptionMessage.CARS_NOT_FOUND;
+import static com.tms.utils.ExceptionMessage.DELETE_CAR_AS_FAVORITE_EXCEPTION;
+import static com.tms.utils.ExceptionMessage.DELETE_CAR_EXCEPTION;
+import static com.tms.utils.ExceptionMessage.NO_ACCESS;
 
 @Service
 @Slf4j
@@ -38,6 +41,7 @@ public class CarServiceImpl implements CarService {
     private final FavoriteCarRepository favoriteCarRepository;
 
     private final MappersToCar mappersToCar;
+
     private final MappersFromCar mappersFromCar;
 
     private final CommentsRepository commentsRepository;
@@ -134,7 +138,6 @@ public class CarServiceImpl implements CarService {
             throw new OtherException(NO_ACCESS);
         }
     }
-
 }
 
 

@@ -7,10 +7,13 @@ import com.tms.model.request.car.AddCarRequestDto;
 import com.tms.model.request.car.UpdateCarRequestDto;
 import org.springframework.stereotype.Component;
 
+/**
+ * Class for change object from car dto  to car
+ */
 @Component
 public class MappersToCar {
 
-    public Car carRequestDtoToCar (AddCarRequestDto addCarRequestDto, Car car) {
+    public Car carRequestDtoToCar(AddCarRequestDto addCarRequestDto, Car car) {
         car.setName_brand(addCarRequestDto.getName_brand());
         car.setName_model(addCarRequestDto.getName_model());
         car.setTransmission(addCarRequestDto.getTransmission());
@@ -27,7 +30,7 @@ public class MappersToCar {
         return car;
     }
 
-    public Car UpdateCarRequestDtoToCar(UpdateCarRequestDto updateCarRequestDto, Car car){
+    public Car UpdateCarRequestDtoToCar(UpdateCarRequestDto updateCarRequestDto, Car car) {
         if (updateCarRequestDto.getCity() != null) {
             car.setCity(updateCarRequestDto.getCity());
         }

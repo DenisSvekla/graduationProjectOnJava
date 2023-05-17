@@ -14,6 +14,7 @@ import com.tms.model.response.Car.GetCarByIdResponseDto;
 public interface CarService {
 
     ArrayList<GetAllCarsResponseDto> getAllCars();
+
     Car createCar(AddCarRequestDto addCarRequestDto);
 
     Car updateCar(UpdateCarRequestDto updateCarRequestDto, int id);

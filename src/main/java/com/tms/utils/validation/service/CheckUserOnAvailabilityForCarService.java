@@ -11,6 +11,9 @@ import com.tms.repository.UserRepository;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 
+/**
+ * check that the user can perform actions in the car service.
+ */
 @Component
 public class CheckUserOnAvailabilityForCarService {
 
@@ -25,8 +28,8 @@ public class CheckUserOnAvailabilityForCarService {
     public Boolean checkUserOnAvailabilityForCarServiceByCarId(int id) {
         var userLoginFromSecurityContext = SecurityContextHolder.getContext().getAuthentication().getName();
         Optional<User> userFromContext = userRepository.getUserByUserLogin(userLoginFromSecurityContext);
-        ArrayList<Car> car = carRepository.getCarsByUserId(userFromContext.get().getId()).orElseThrow(()->new NotFoundException("asd"));
-        if (car.size()!=0 || userFromContext.get().getUser_type().equals("ADMIN")) {
+        ArrayList<Car> car = carRepository.getCarsByUserId(userFromContext.get().getId()).orElseThrow(() -> new NotFoundException("asd"));
+        if (car.size() != 0 || userFromContext.get().getUser_type().equals("ADMIN")) {
             return true;
         }
         return false;

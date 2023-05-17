@@ -1,7 +1,14 @@
 package com.tms.model.domain;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 
+import com.tms.annotation.CheckOperatorName;
 import lombok.Data;
 
 @Data
@@ -14,6 +21,7 @@ public class Phone {
     private int id;
     @Column(name = "number")
     private String number;
+    @CheckOperatorName
     @Column(name = "operator")
     private String operator;
     @Column(name = "user_id")

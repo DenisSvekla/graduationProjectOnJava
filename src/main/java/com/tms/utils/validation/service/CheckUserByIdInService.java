@@ -9,14 +9,14 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 
 /**
- * Сhecks that the received information is available to the user. Checked with SecurityContextHolder.
+ * Сheck that the received information is available to the user. Checked with SecurityContextHolder.
  */
 @Component
-public class CheckUserByIdInUserService {
+public class CheckUserByIdInService {
 
     private final UserRepository userRepository;
 
-    public CheckUserByIdInUserService(UserRepository userRepository) {
+    public CheckUserByIdInService(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
