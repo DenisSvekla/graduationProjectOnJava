@@ -4,8 +4,8 @@ import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.tms.ExceprtionResolver.NotFoundException;
-import com.tms.ExceprtionResolver.OtherException;
+import com.tms.exceprtionResolver.NotFoundException;
+import com.tms.exceprtionResolver.OtherException;
 import com.tms.mapper.MappersFromCar;
 import com.tms.mapper.MappersToCar;
 import com.tms.model.domain.Car;
@@ -14,8 +14,8 @@ import com.tms.model.domain.FavoriteCar;
 import com.tms.model.request.car.AddCarRequestDto;
 import com.tms.model.request.car.DeleteCarRequestDto;
 import com.tms.model.request.car.UpdateCarRequestDto;
-import com.tms.model.response.Car.GetAllCarsResponseDto;
-import com.tms.model.response.Car.GetCarByIdResponseDto;
+import com.tms.model.response.car.GetAllCarsResponseDto;
+import com.tms.model.response.car.GetCarByIdResponseDto;
 import com.tms.repository.CarRepository;
 import com.tms.repository.CommentsRepository;
 import com.tms.repository.FavoriteCarRepository;
@@ -88,8 +88,8 @@ public class CarServiceImpl implements CarService {
 
     public void addComment(int carId, Comments comment) {
         int idUsers = getIdUserFromContext.getIdUserFromContext();
-        comment.setCar_id(carId);
-        comment.setUser_id(idUsers);
+        comment.setCarId(carId);
+        comment.setUserId(idUsers);
         comment.setChanged(new Date(System.currentTimeMillis()));
         comment.setCreated(new Date(System.currentTimeMillis()));
         commentsRepository.saveAndFlush(comment);
@@ -99,7 +99,7 @@ public class CarServiceImpl implements CarService {
     public GetCarByIdResponseDto getCarById(int id) {
         Car car = carRepository.findById(id).orElseThrow(() -> new NotFoundException(CARS_NOT_FOUND));
         List<Comments> commentsForCar = commentsRepository.getCommentsByCar_id(id);
-        car.setCount_view(car.getCount_view() + 1);
+        car.setCountView(car.getCountView() + 1);
         GetCarByIdResponseDto carByIdWithResponse = new GetCarByIdResponseDto();
         carByIdWithResponse = mappersFromCar.carToGetCarByIdResponseDto(car, carByIdWithResponse, commentsForCar);
         return carByIdWithResponse;

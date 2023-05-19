@@ -2,8 +2,8 @@ package com.tms.service.impl;
 
 import java.util.List;
 
-import com.tms.ExceprtionResolver.NotFoundException;
-import com.tms.ExceprtionResolver.OtherException;
+import com.tms.exceprtionResolver.NotFoundException;
+import com.tms.exceprtionResolver.OtherException;
 import com.tms.model.domain.Phone;
 import com.tms.model.request.phone.PhoneCreateRequestDto;
 import com.tms.model.response.phone.PhoneRequestDto;

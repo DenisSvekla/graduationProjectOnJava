@@ -3,14 +3,14 @@ package com.tms.service.impl;
 import java.sql.Date;
 import java.util.ArrayList;
 
-import com.tms.ExceprtionResolver.NotFoundException;
-import com.tms.ExceprtionResolver.OtherException;
+import com.tms.exceprtionResolver.NotFoundException;
+import com.tms.exceprtionResolver.OtherException;
 import com.tms.mapper.MappersFromUser;
 import com.tms.mapper.MappersToUser;
 import com.tms.model.domain.User;
-import com.tms.model.request.User.UserRegistrationRequest;
-import com.tms.model.request.User.UserUpdateDto;
-import com.tms.model.response.User.UserGetByIdResponse;
+import com.tms.model.request.user.UserRegistrationRequest;
+import com.tms.model.request.user.UserUpdateDto;
+import com.tms.model.response.user.UserGetByIdResponse;
 import com.tms.repository.UserRepository;
 import com.tms.service.UserService;
 import com.tms.utils.validation.service.CheckUserByIdInService;
@@ -53,8 +53,8 @@ public class UserServiceImpl implements UserService {
 
     public UserGetByIdResponse getUserById(int id) {
         UserGetByIdResponse userGetByIdResponse = new UserGetByIdResponse();
-        User user = userRepository.findByIs_deleted(id).orElseThrow(() -> new NotFoundException(USER_NOT_FOUND));
-        if (checkUserByIdInService.checkUserByIdAndType(id) && !user.is_deleted()) {
+        User user = userRepository.findByIsDeleted(id).orElseThrow(() -> new NotFoundException(USER_NOT_FOUND));
+        if (checkUserByIdInService.checkUserByIdAndType(id) && !user.isDeleted()) {
             mappersFromUser.userGetByIdResponseFromUser(userGetByIdResponse, user);
             return userGetByIdResponse;
         }
@@ -66,7 +66,7 @@ public class UserServiceImpl implements UserService {
     public User userRegistration(UserRegistrationRequest userRegistrationRequest) {
         User user = new User();
         mappersToUser.fromUserRegistrationRequestToUser(userRegistrationRequest, user);
-        user.setUser_type(userType);
+        user.setUserType(userType);
         user.setCreated(new Date(System.currentTimeMillis()));
         user.setChanged(new Date(System.currentTimeMillis()));
         return userRepository.saveAndFlush(user);
@@ -84,7 +84,7 @@ public class UserServiceImpl implements UserService {
     }
 
     public User updateUser(UserUpdateDto userUpdateDto, int id) {
-        User userFromDB = userRepository.findByIs_deleted(id).orElseThrow(() -> new NotFoundException(USER_NOT_FOUND));
+        User userFromDB = userRepository.findByIsDeleted(id).orElseThrow(() -> new NotFoundException(USER_NOT_FOUND));
         if (checkUserByIdInService.checkUserByIdAndType(id)) {
             mappersToUser.fromUserUpdateDtoToUser(userUpdateDto, userFromDB);
             userFromDB.setChanged(new Date(System.currentTimeMillis()));

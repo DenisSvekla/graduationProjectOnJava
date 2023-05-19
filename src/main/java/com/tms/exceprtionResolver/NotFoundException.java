@@ -1,4 +1,4 @@
-package com.tms.ExceprtionResolver;
+package com.tms.exceprtionResolver;
 
 public class NotFoundException extends RuntimeException {
 

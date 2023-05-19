@@ -3,9 +3,9 @@ package com.tms.controller;
 import java.util.ArrayList;
 
 import com.tms.model.domain.User;
-import com.tms.model.request.User.UserRegistrationRequest;
-import com.tms.model.request.User.UserUpdateDto;
-import com.tms.model.response.User.UserGetByIdResponse;
+import com.tms.model.request.user.UserRegistrationRequest;
+import com.tms.model.request.user.UserUpdateDto;
+import com.tms.model.response.user.UserGetByIdResponse;
 import com.tms.service.UserService;
 import com.tms.service.impl.UserServiceImpl;
 import io.swagger.v3.oas.annotations.Operation;
@@ -57,7 +57,6 @@ public class UserController {
         if (user == null) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
-
         return new ResponseEntity<>(user, HttpStatus.OK);
     }
 

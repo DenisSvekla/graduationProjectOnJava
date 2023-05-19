@@ -1,7 +1,7 @@
 package com.tms.mapper;
 
 import com.tms.model.domain.User;
-import com.tms.model.response.User.UserGetByIdResponse;
+import com.tms.model.response.user.UserGetByIdResponse;
 import org.springframework.stereotype.Component;
 
 /**
@@ -14,9 +14,9 @@ public class MappersFromUser {
         userGetByIdResponse.setName(user.getName());
         userGetByIdResponse.setLoginUser(user.getLoginUser());
         userGetByIdResponse.setSurname(user.getSurname());
-        userGetByIdResponse.setUser_type(user.getUser_type());
+        userGetByIdResponse.setUser_type(user.getUserType());
         userGetByIdResponse.setEmail(user.getEmail());
-        userGetByIdResponse.setBirthday_date(user.getBirthday_date());
+        userGetByIdResponse.setBirthday_date(user.getBirthdayDate());
         return userGetByIdResponse;
     }
 }

@@ -1,8 +1,8 @@
 package com.tms.mapper;
 
 import com.tms.model.domain.User;
-import com.tms.model.request.User.UserRegistrationRequest;
-import com.tms.model.request.User.UserUpdateDto;
+import com.tms.model.request.user.UserRegistrationRequest;
+import com.tms.model.request.user.UserUpdateDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
@@ -33,8 +33,8 @@ public class MappersToUser {
         if (userUpdateDto.getEmail() != null) {
             user.setEmail(userUpdateDto.getEmail());
         }
-        if (userUpdateDto.getBirthday_date() != null) {
-            user.setBirthday_date(userUpdateDto.getBirthday_date());
+        if (userUpdateDto.getBirthdayDate() != null) {
+            user.setBirthdayDate(userUpdateDto.getBirthdayDate());
         }
         return user;
     }
@@ -45,7 +45,7 @@ public class MappersToUser {
         user.setName(userRegistrationRequest.getName());
         user.setSurname(userRegistrationRequest.getSurname());
         user.setEmail(userRegistrationRequest.getEmail());
-        user.setBirthday_date(userRegistrationRequest.getBirthday_date());
+        user.setBirthdayDate(userRegistrationRequest.getBirthdayDate());
         return user;
     }
 }

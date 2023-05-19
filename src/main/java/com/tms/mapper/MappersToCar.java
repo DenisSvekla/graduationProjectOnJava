@@ -14,16 +14,16 @@ import org.springframework.stereotype.Component;
 public class MappersToCar {
 
     public Car carRequestDtoToCar(AddCarRequestDto addCarRequestDto, Car car) {
-        car.setName_brand(addCarRequestDto.getName_brand());
-        car.setName_model(addCarRequestDto.getName_model());
+        car.setNameBrand(addCarRequestDto.getNameBrand());
+        car.setNameModel(addCarRequestDto.getNameModel());
         car.setTransmission(addCarRequestDto.getTransmission());
-        car.setDate_of_issue(addCarRequestDto.getDate_of_issue());
+        car.setDateOfIssue(addCarRequestDto.getDateOfIssue());
         car.setColor(addCarRequestDto.getColor());
-        car.setRegistration_number(addCarRequestDto.getRegistration_number());
+        car.setRegistrationNumber(addCarRequestDto.getRegistrationNumber());
         car.setPrice(addCarRequestDto.getPrice());
-        car.setEngine_type(addCarRequestDto.getEngine_type());
+        car.setEngineType(addCarRequestDto.getEngineType());
         car.setCity(addCarRequestDto.getCity());
-        car.setCount_view(0);
+        car.setCountView(0);
         car.setStatus("actual");
         car.setCreated(new Date(System.currentTimeMillis()));
         car.setChanged(new Date(System.currentTimeMillis()));
@@ -37,26 +37,26 @@ public class MappersToCar {
         if (updateCarRequestDto.getColor() != null) {
             car.setColor(updateCarRequestDto.getColor());
         }
-        if (updateCarRequestDto.getName_brand() != null) {
-            car.setName_brand(updateCarRequestDto.getName_brand());
+        if (updateCarRequestDto.getNameBrand() != null) {
+            car.setNameBrand(updateCarRequestDto.getNameBrand());
         }
-        if (updateCarRequestDto.getName_model() != null) {
-            car.setName_model(updateCarRequestDto.getName_model());
+        if (updateCarRequestDto.getNameModel() != null) {
+            car.setNameModel(updateCarRequestDto.getNameModel());
         }
         if (updateCarRequestDto.getTransmission() != null) {
             car.setTransmission(updateCarRequestDto.getTransmission());
         }
-        if (updateCarRequestDto.getDate_of_issue() != null) {
-            car.setDate_of_issue(updateCarRequestDto.getDate_of_issue());
+        if (updateCarRequestDto.getDateOfIssue() != null) {
+            car.setDateOfIssue(updateCarRequestDto.getDateOfIssue());
         }
-        if (updateCarRequestDto.getRegistration_number() != null) {
-            car.setRegistration_number(updateCarRequestDto.getRegistration_number());
+        if (updateCarRequestDto.getRegistrationNumber() != null) {
+            car.setRegistrationNumber(updateCarRequestDto.getRegistrationNumber());
         }
         if (updateCarRequestDto.getPrice() != 0) {
             car.setPrice(updateCarRequestDto.getPrice());
         }
-        if (updateCarRequestDto.getEngine_type() != null) {
-            car.setEngine_type(updateCarRequestDto.getEngine_type());
+        if (updateCarRequestDto.getEngineType() != null) {
+            car.setEngineType(updateCarRequestDto.getEngineType());
         }
         return car;
     }

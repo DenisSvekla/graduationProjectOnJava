@@ -7,22 +7,22 @@ import lombok.Data;
 @Data
 public class UpdateCarRequestDto {
 
-    private String name_brand;
+    private String nameBrand;
 
-    private String name_model;
+    private String nameModel;
 
     @CheckTransmission
     private String transmission;
 
-    private String date_of_issue;
+    private String dateOfIssue;
 
     private String color;
 
-    private String registration_number;
+    private String registrationNumber;
 
     private int price;
 
-    private String engine_type;
+    private String engineType;
 
     private String city;
 }

@@ -25,7 +25,7 @@ public class CheckUserByIdInService {
         var userLoginFromSecurityContext = SecurityContextHolder.getContext().getAuthentication().getName();
         Optional<User> userFromContext = userRepository.getUserByUserLogin(userLoginFromSecurityContext);
         User user = userRepository.findById(id).orElse(new User());
-        if (user.getId() == userFromContext.get().getId() || userFromContext.get().getUser_type().equals("ADMIN")) {
+        if (user.getId() == userFromContext.get().getId() || userFromContext.get().getUserType().equals("ADMIN")) {
             return true;
         }
         return false;
@@ -34,7 +34,7 @@ public class CheckUserByIdInService {
     public Boolean checkUserByType() {
         var userLoginFromSecurityContext = SecurityContextHolder.getContext().getAuthentication().getName();
         Optional<User> userFromContext = userRepository.getUserByUserLogin(userLoginFromSecurityContext);
-        if (userFromContext.get().getUser_type().equals("ADMIN")) {
+        if (userFromContext.get().getUserType().equals("ADMIN")) {
             return true;
         }
         return false;

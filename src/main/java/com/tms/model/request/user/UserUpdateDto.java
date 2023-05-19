@@ -1,16 +1,22 @@
-package com.tms.model.response.User;
+package com.tms.model.request.user;
+
 
 import java.sql.Date;
 
 import lombok.Data;
 
-
 @Data
-public class UserGetByIdResponse {
+public class UserUpdateDto {
+
     private String name;
+
     private String surname;
+
     private String email;
-    private Date birthday_date;
-    private String user_type;
+
+    private Date birthdayDate;
+
     private String loginUser;
+
+
 }
