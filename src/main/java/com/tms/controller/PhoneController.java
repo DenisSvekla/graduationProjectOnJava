@@ -38,7 +38,7 @@ public class PhoneController {
         return new ResponseEntity<>(phoneService.createPhoneForUser(phoneCreateRequestDto, id) != null ? HttpStatus.OK : HttpStatus.CONFLICT);
     }
 
-    @DeleteMapping("{idPhone}")
+    @DeleteMapping("/{idPhone}")
     public ResponseEntity<HttpStatus> deletePhone(@PathVariable int id, @PathVariable int idPhone) {
         phoneService.deletePhone(id, idPhone);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);

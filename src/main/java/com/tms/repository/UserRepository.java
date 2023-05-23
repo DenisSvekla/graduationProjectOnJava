@@ -15,11 +15,9 @@ public interface UserRepository extends JpaRepository<User, Integer> {
      * @param id
      * @return
      */
-    @Query(value = "from User where is_deleted = false AND id=:id")
-    Optional<User> findByIs_deleted(int id);
+    @Query(value = "from User where isDeleted = false AND id=:id")
+    Optional<User> findByIsDeleted(int id);
 
-    @Query(value = "from User where is_deleted = false")
-    Optional<User> getAllByIs_deleted();
 
     @Query(value = "from User where loginUser=:loginUser")
     Optional<User> getUserByUserLogin(String loginUser);

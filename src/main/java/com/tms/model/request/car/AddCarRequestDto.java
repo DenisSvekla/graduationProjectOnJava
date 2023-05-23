@@ -8,24 +8,24 @@ import lombok.Data;
 @Data
 public class AddCarRequestDto {
 
-    private String name_brand;
+    private String nameBrand;
 
-    private String name_model;
+    private String nameModel;
 
     @CheckTransmission
     private String transmission;
 
-    private String date_of_issue;
+    private String dateOfIssue;
 
     private String color;
 
-    private String registration_number;
+    private String registrationNumber;
 
     @Min(value = 1)
     private int price;
 
     @CheckTransmission
-    private String engine_type;
+    private String engineType;
 
     private String city;
 

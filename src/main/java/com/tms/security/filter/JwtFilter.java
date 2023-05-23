@@ -41,7 +41,7 @@ public class JwtFilter extends GenericFilterBean {
             UserDetails secUSer = org.springframework.security.core.userdetails.User.builder()
                     .username(userFromDb.getLoginUser())
                     .password(userFromDb.getPasswordUser())
-                    .roles(userFromDb.getUser_type())
+                    .roles(userFromDb.getUserType())
                     .build();
             UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(secUSer, null, secUSer.getAuthorities());
             SecurityContextHolder.getContext().setAuthentication(authToken);

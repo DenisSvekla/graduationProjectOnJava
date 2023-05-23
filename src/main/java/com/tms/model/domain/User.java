@@ -33,13 +33,13 @@ public class User {
     private String email;
 
     @Column(name = "birthday_date")
-    private Date birthday_date;
+    private Date birthdayDate;
 
     @Column(name = "user_type")
-    private String user_type;
+    private String userType;
 
     @Column(name = "is_deleted")
-    private boolean is_deleted;
+    private boolean isDeleted;
 
     @Column(name = "created")
     private Date created;

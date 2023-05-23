@@ -8,8 +8,8 @@ import com.tms.model.domain.FavoriteCar;
 import com.tms.model.request.car.AddCarRequestDto;
 import com.tms.model.request.car.DeleteCarRequestDto;
 import com.tms.model.request.car.UpdateCarRequestDto;
-import com.tms.model.response.Car.GetAllCarsResponseDto;
-import com.tms.model.response.Car.GetCarByIdResponseDto;
+import com.tms.model.response.car.GetAllCarsResponseDto;
+import com.tms.model.response.car.GetCarByIdResponseDto;
 
 public interface CarService {
 

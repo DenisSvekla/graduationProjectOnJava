@@ -9,4 +9,6 @@ public interface SubscriptionService {
     SubscriptionResponseDto getSubscription(int id);
 
     Subscription createOrUpdateSubscription(int id, SubscriptionRequestDto subscriptionRequestDto);
+
+    Boolean deleteSubscription(int id);
 }

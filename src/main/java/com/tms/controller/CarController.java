@@ -8,8 +8,8 @@ import com.tms.model.domain.FavoriteCar;
 import com.tms.model.request.car.AddCarRequestDto;
 import com.tms.model.request.car.DeleteCarRequestDto;
 import com.tms.model.request.car.UpdateCarRequestDto;
-import com.tms.model.response.Car.GetAllCarsResponseDto;
-import com.tms.model.response.Car.GetCarByIdResponseDto;
+import com.tms.model.response.car.GetAllCarsResponseDto;
+import com.tms.model.response.car.GetCarByIdResponseDto;
 import com.tms.service.CarService;
 import com.tms.service.impl.CarServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,7 +33,6 @@ public class CarController {
     @Autowired
     public CarController(CarServiceImpl carService) {
         this.carService = carService;
-
     }
 
     @GetMapping
@@ -65,7 +64,6 @@ public class CarController {
     public ResponseEntity<GetCarByIdResponseDto> getCarById(@PathVariable int id) {
         GetCarByIdResponseDto car = carService.getCarById(id);
         return new ResponseEntity<>(car, (car.getUser_id() == 0) ? HttpStatus.OK : HttpStatus.CONFLICT);
-
     }
 
     @PutMapping("/{id}/addCar")
@@ -86,6 +84,5 @@ public class CarController {
         carService.deleteCar(deleteCarRequestDto, id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
-
 }
 

@@ -14,5 +14,6 @@ public interface ExceptionMessage {
     String PHONES_NOT_FOUND = "phones not found";
 
     String CARS_NOT_FOUND = "Cars not found";
+    String CAR_NOT_FOUND = "Car not found";
     String SUBSCRIPTION_NOT_FOUND = "Subscription not found";
 }

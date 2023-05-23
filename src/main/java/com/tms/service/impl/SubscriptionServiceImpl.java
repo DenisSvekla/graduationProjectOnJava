@@ -2,8 +2,8 @@ package com.tms.service.impl;
 
 import java.sql.Date;
 
-import com.tms.ExceprtionResolver.NotFoundException;
-import com.tms.ExceprtionResolver.OtherException;
+import com.tms.exceprtionResolver.NotFoundException;
+import com.tms.exceprtionResolver.OtherException;
 import com.tms.model.domain.Subscription;
 import com.tms.model.request.SubscriptionRequestDto;
 import com.tms.model.response.subscription.SubscriptionResponseDto;
@@ -67,5 +67,25 @@ public class SubscriptionServiceImpl implements SubscriptionService {
             return subscriptionRepository.save(subscription);
         }
         throw new OtherException(NO_ACCESS);
+    }
+
+    public Boolean deleteSubscription(int id) {
+        Subscription subscription = subscriptionRepository.findSubscriptionByUserId(id).orElseThrow(()->new NotFoundException(SUBSCRIPTION_NOT_FOUND));
+        int value;
+        try {
+            value = subscription.getExpireDate().compareTo((new Date(System.currentTimeMillis())));
+        } catch (NullPointerException e) {
+            value =-1;
+            subscription.setUserId(id);
+        }
+        if (value<0) {
+            return false;
+        }
+        if(value>=0) {
+            subscription.setExpireDate(new Date(2000-00-00));
+            subscriptionRepository.save(subscription);
+            return true;
+        }
+        return false;
     }
 }

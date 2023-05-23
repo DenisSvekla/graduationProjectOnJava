@@ -23,36 +23,36 @@ public class Car {
     private int id;
 
     @Column(name = "name_brand")
-    private String name_brand;
+    private String nameBrand;
 
     @Column(name = "name_model")
-    private String name_model;
+    private String nameModel;
 
     @CheckTransmission
     @Column(name = "transmission")
     private String transmission;
 
     @Column(name = "date_of_issue")
-    private String date_of_issue;
+    private String dateOfIssue;
 
     @Column(name = "color")
     private String color;
 
     @Column(name = "registration_number")
-    private String registration_number;
+    private String registrationNumber;
 
     @Min(value = 1)
     @Column(name = "price")
     private int price;
 
     @Column(name = "engine_type")
-    private String engine_type;
+    private String engineType;
 
     @Column(name = "city")
     private String city;
 
     @Column(name = "count_view")
-    private Integer count_view;
+    private Integer countView;
 
     @Column(name = "stasus")
     private String status;

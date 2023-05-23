@@ -1,4 +1,4 @@
-package com.tms.model.request.User;
+package com.tms.model.request.user;
 
 import java.sql.Date;
 
@@ -15,5 +15,5 @@ public class UserGetById {
 
     private String email;
 
-    private Date birthday_date;
+    private Date birthdayDate;
 }

@@ -16,11 +16,9 @@ public class SecurityController {
 
     private final SecurityService securityService;
 
-
     @Autowired
     public SecurityController(SecurityService securityService) {
         this.securityService = securityService;
-
     }
 
     @PostMapping("/auth")

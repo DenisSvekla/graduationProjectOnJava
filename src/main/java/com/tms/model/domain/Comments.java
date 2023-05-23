@@ -23,14 +23,14 @@ public class Comments {
     private int id;
 
     @Column(name = "car_id")
-    private int car_id;
+    private int carId;
 
     @NotNull
     @Column(name = "comments")
     private String comments;
 
     @Column(name = "user_id")
-    private int user_id;
+    private int userId;
 
     @Column(name = "created")
     private Date created;

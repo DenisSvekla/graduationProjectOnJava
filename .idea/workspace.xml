@@ -4,10 +4,51 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f4e3fe3-641a-4c96-b767-9e20d72e40ab" name="Changes" comment="continue work with project">
+    <list default="true" id="6f4e3fe3-641a-4c96-b767-9e20d72e40ab" name="Changes" comment="changed">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/tms/MainTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/tms/service/impl/UserServiceImplTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/tms/service/impl/UserServiceImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/ExceprtionResolver/ExceptionControllerAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/exceprtionResolver/ExceptionControllerAdvice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/ExceprtionResolver/ExceptionDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/exceprtionResolver/ExceptionDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/ExceprtionResolver/NotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/exceprtionResolver/NotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/ExceprtionResolver/OtherException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/exceprtionResolver/OtherException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/controller/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/controller/CarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/controller/PhoneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/controller/PhoneController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/controller/SubscriptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/controller/SubscriptionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/mapper/MappersFromCar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/mapper/MappersFromCar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/mapper/MappersFromUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/mapper/MappersFromUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/mapper/MappersToCar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/mapper/MappersToCar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/mapper/MappersToUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/mapper/MappersToUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/model/domain/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/domain/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/model/domain/Comments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/domain/Comments.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/model/domain/Phone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/domain/Phone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/model/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/model/request/User/UserGetById.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/request/user/UserGetById.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/model/request/User/UserRegistrationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/request/user/UserRegistrationRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/model/request/User/UserUpdateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/request/user/UserUpdateDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/model/request/car/AddCarRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/request/car/AddCarRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/model/request/car/UpdateCarRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/request/car/UpdateCarRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/model/response/Car/GetAllCarsResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/response/car/GetAllCarsResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/model/response/Car/GetCarByIdResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/response/car/GetCarByIdResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/model/response/User/UserGetByIdResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/model/response/user/UserGetByIdResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/repository/CarRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/repository/CarRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/security/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/security/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/security/controller/SecurityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/security/controller/SecurityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/security/filter/JwtFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/security/filter/JwtFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/service/CarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/service/CarService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/service/SubscriptionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/service/SubscriptionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/service/impl/CarServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/service/impl/CarServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/service/impl/PhoneServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/service/impl/PhoneServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/service/impl/SubscriptionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/service/impl/SubscriptionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/utils/ExceptionMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/utils/ExceptionMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/utils/validation/service/CheckUserByIdInService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/utils/validation/service/CheckUserByIdInService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/utils/validation/service/CheckUserOnAvailabilityForCarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/utils/validation/service/CheckUserOnAvailabilityForCarService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +60,7 @@
       <list>
         <option value="spring-beans.schema" />
         <option value="Interface" />
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -40,38 +82,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "database.data.extractors.current.export.id": "SQL Inserts",
-    "jdk.selected.JAVA_MODULE": "11",
-    "last_opened_file_path": "C:/Users/denissv/IdeaProjects/storage",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.sourceCode.Java",
-    "spring.configuration.checksum": "f0985c3fbf315cc110e59262ec3cca8d"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;database.data.extractors.current.export.id&quot;: &quot;SQL Inserts&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/denissv/IdeaProjects/storage&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.Java&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;f0985c3fbf315cc110e59262ec3cca8d&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql",
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;,
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\denissv\IdeaProjects\graduationProjectOnJava\src\main\resources" />
@@ -80,80 +124,118 @@
       <recent name="C:\Users\denissv\IdeaProjects\graduationProjectOnJava\src\main\resources" />
       <recent name="C:\Users\denissv\IdeaProjects\graduationProjectOnJava\src\main\resources\META-INF" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.tms.service.impl" />
+      <recent name="com.tms.controller" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.tms.utils" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.Main">
-    <configuration name="Main | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/Main.http" requestIdentifier="#1" runType="Run single request">
-      <method v="2" />
-    </configuration>
-    <configuration name="TestClass.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MainTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="graduationProjectOnJava" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="graduationProjectOnJava.functionalTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="graduationProjectOnJava.functionalTest" />
-      <option name="MAIN_CLASS_NAME" value="graduationProjectOnJava.functionalTest.TestClass" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <option name="ACTIVE_PROFILES" />
-      <option name="INCLUDE_PROVIDED_SCOPE" value="false" />
-      <module name="graduationProjectOnJava" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.tms.Main" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.tms.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.tms" />
+      <option name="MAIN_CLASS_NAME" value="com.tms.MainTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="docker-compose.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker2">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="sourceFilePath" value="docker-compose.yaml" />
-        </settings>
-      </deployment>
-      <method v="2" />
+    <configuration name="UserServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="graduationProjectOnJava" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tms.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.tms.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.tms.service.impl.UserServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="docker-compose.yaml.database: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="database" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="docker-compose.yaml" />
-        </settings>
-      </deployment>
-      <method v="2" />
+    <configuration name="UserServiceImplTest.getAllUsers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="graduationProjectOnJava" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tms.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.tms.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.tms.service.impl.UserServiceImplTest" />
+      <option name="METHOD_NAME" value="getAllUsers" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceImplTest.testDeleteUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="graduationProjectOnJava" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tms.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.tms.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.tms.service.impl.UserServiceImplTest" />
+      <option name="METHOD_NAME" value="testDeleteUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceImplTest.testUserRegistration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="graduationProjectOnJava" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tms.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.tms.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.tms.service.impl.UserServiceImplTest" />
+      <option name="METHOD_NAME" value="testUserRegistration" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="graduationProjectOnJava" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.tms.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <list>
-      <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
-      <item itemvalue="Docker.docker-compose.yaml.database: Compose Deployment" />
-      <item itemvalue="HTTP Request.Main | #1" />
-      <item itemvalue="JUnit.TestClass.test" />
+      <item itemvalue="JUnit.MainTest" />
+      <item itemvalue="JUnit.UserServiceImplTest" />
+      <item itemvalue="JUnit.UserServiceImplTest.getAllUsers" />
+      <item itemvalue="JUnit.UserServiceImplTest.testDeleteUser" />
+      <item itemvalue="JUnit.UserServiceImplTest.testUserRegistration" />
       <item itemvalue="Spring Boot.Main" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.Main" />
-        <item itemvalue="HTTP Request.Main | #1" />
-        <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yaml.database: Compose Deployment" />
-        <item itemvalue="JUnit.TestClass.test" />
+        <item itemvalue="JUnit.MainTest" />
+        <item itemvalue="JUnit.UserServiceImplTest" />
+        <item itemvalue="JUnit.UserServiceImplTest.getAllUsers" />
+        <item itemvalue="JUnit.UserServiceImplTest.testDeleteUser" />
+        <item itemvalue="JUnit.UserServiceImplTest.testUserRegistration" />
       </list>
     </recent_temporary>
   </component>
@@ -203,7 +285,10 @@
       <workItem from="1683909772825" duration="3126000" />
       <workItem from="1683958446495" duration="22810000" />
       <workItem from="1684058101600" duration="29205000" />
-      <workItem from="1684353101674" duration="2522000" />
+      <workItem from="1684353101674" duration="3940000" />
+      <workItem from="1684423225486" duration="9926000" />
+      <workItem from="1684439887758" duration="3451000" />
+      <workItem from="1684475146849" duration="729000" />
     </task>
     <task id="LOCAL-00001" summary="start project">
       <created>1678988794104</created>
@@ -233,7 +318,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684344729818</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="continue work with project">
+      <created>1684355862019</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1684355862019</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,30 +346,11 @@
     <MESSAGE value="start project" />
     <MESSAGE value="continue work" />
     <MESSAGE value="continue work with project" />
-    <option name="LAST_COMMIT_MESSAGE" value="continue work with project" />
+    <MESSAGE value="changed" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/tms/service/impl/UserServiceImpl.java</url>
-          <line>97</line>
-          <properties>
-            <option name="lambda-ordinal" value="-1" />
-          </properties>
-          <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/com/tms/service/impl/PhoneServiceImpl.java</url>
-          <line>51</line>
-          <properties class="com.tms.service.impl.PhoneServiceImpl">
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="44" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="int" />

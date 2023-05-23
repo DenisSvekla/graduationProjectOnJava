@@ -1,4 +1,4 @@
-package com.tms.model.request.User;
+package com.tms.model.request.user;
 
 import javax.validation.constraints.NotNull;
 import java.sql.Date;
@@ -20,7 +20,7 @@ public class UserRegistrationRequest {
     private String email;
 
     @NotNull
-    private Date birthday_date;
+    private Date birthdayDate;
 
     @NotNull
     private String loginUser;

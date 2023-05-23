@@ -3,9 +3,9 @@ package com.tms.service;
 import java.util.ArrayList;
 
 import com.tms.model.domain.User;
-import com.tms.model.request.User.UserRegistrationRequest;
-import com.tms.model.request.User.UserUpdateDto;
-import com.tms.model.response.User.UserGetByIdResponse;
+import com.tms.model.request.user.UserRegistrationRequest;
+import com.tms.model.request.user.UserUpdateDto;
+import com.tms.model.response.user.UserGetByIdResponse;
 
 public interface UserService {
 

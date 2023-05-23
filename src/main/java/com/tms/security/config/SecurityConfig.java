@@ -63,6 +63,7 @@ public class SecurityConfig {
                         .antMatchers(HttpMethod.DELETE, "/user/**").hasAnyRole("USER", "ADMIN")
                         .antMatchers("/swagger-ui/**").hasRole("ADMIN")
                         .antMatchers(HttpMethod.GET, "/user").hasRole("ADMIN")
+                        .antMatchers(HttpMethod.DELETE, "/user/**/subscription").hasRole("ADMIN")
                         .anyRequest().authenticated()
                         .and()
                         .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)

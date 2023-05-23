@@ -1,4 +1,4 @@
-package com.tms.ExceprtionResolver;
+package com.tms.exceprtionResolver;
 
 import java.time.LocalDateTime;
 
